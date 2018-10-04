@@ -1,0 +1,48 @@
+
+Nota 1:
+1) Al agregar un usuario agente, primero tiene que existir un agente 
+almacenado en la BD.
+
+2) Al eliminar un usuario agente, primero tiene que eliminar al usuario
+y luego eliminar al agente. 
+--------------------------------------------------------------------------
+
+Nota 2:
+1) Al agregar una imagen producto, primero tiene que existir un producto 
+almacenado en la BD.
+
+2) Al eliminar una imagen producto, primero tiene que eliminar la Imagen
+y luego eliminar al producto.
+--------------------------------------------------------------------------
+
+Nota 3:
+1) Al agregar un pedido, primero tiene que existir un agente y un cliente 
+almacenado en la BD.
+
+2) Al eliminar un pedido, primero tiene que eliminar el pedido
+y luego eliminar al agente y al cliente.
+---------------------------------------------------------------------------------------------
+
+Nota 4:
+1) Al agregar un detalle pedido, primero tiene que existir un agente, un cliente y un pedido,
+además tiene que existir un también un producto y un id Detalle pedido almacenado en la BD.
+
+2) Al eliminar un detalle pedido, primero tiene que eliminar el detalle pedido, 
+luego eliminar el pedido, luego al agente y al cliente y por último el producto.
+
+3) Al no exitir un PK en el detalle pedido no se puede utilizar el FindById. (Por arreglar)
+-------------------------------------------------------------------------------------------
+
+Nota 5:
+1) Al agregar una venta, primero tiene que existir un agente, un cliente y un pedido 
+almacenado en la BD.
+
+2) Al eliminar una venta, primero tiene que eliminar la venta, luego el pedido
+y por ultimo eliminar al agente y al cliente.
+--------------------------------------------------------------------------------------------
+
+NOTA ACLARATORIA IMPORTANTE:
+Los clientes, pedidos, agentes entre otras instancias pueden serguir existiendo aunque
+se elimine una clase que los requiera.
+Ej:
+Los agentes y los clientes pueden seguir existiendo aunque se borre el pedido.
