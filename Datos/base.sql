@@ -85,6 +85,23 @@ create table BDC_Usuario_Agente(
     constraint FK0_BDC_Usuario_Agente foreign key (codigo_Agente) references BDC.BDC_Agente (codigo)
 );
 
+-- create table BDC_Usuario_Administrador(
+-- 	codigo_Agente varchar(245),
+--    contrasena varchar(245),
+--    constraint PK_BDC_Usuario_Administrador primary key (codigo_Agente),
+--    constraint FK0_BDC_Usuario_Administrador foreign key (codigo_Agente) references BDC.BDC_Administrador (identificacion)
+-- );
+
+
+create table BDC_Super_Usuario(
+	codigo varchar(245),
+    clave varchar(245),
+    tipo varchar(245),
+    constraint PK_BDC_Super_Usuario primary key (codigo)
+);
+
+-- Hay problemas con los fk constraints
+
 
 use BDC;
 create table BDC_Pedido(
@@ -112,7 +129,6 @@ use BDC;
 create table BDC_Administrador(
 	identificacion varchar(245),
     nombre varchar(245),
-    clave varchar(245),
     constraint PK_BDC_Administrador  primary key (identificacion)
 );
 
@@ -139,9 +155,8 @@ create table BDC_Reserva(
 
 use BDC;
 create table BDC_Img_Producto(
-    imagen mediumblob,
+    imagen varchar(245),
     producto varchar(245),
     constraint PK_BDC_Img_Producto primary key (producto),
     constraint PK_BDC_Img_Producto foreign key (producto) references BDC.BDC_Producto (codigo)
 );
-
